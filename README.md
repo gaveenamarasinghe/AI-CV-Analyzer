@@ -1,4 +1,4 @@
-AI analyser  readme. # AI-CV Analyser
+ # AI-CV Analyser
 
 AI-CV Analyser is an intelligent resume and CV analysis platform that leverages artificial intelligence to extract, parse, and analyze candidate information from CV documents. The system provides comprehensive insights, skill matching, and automated candidate evaluation to streamline recruitment processes.
 
