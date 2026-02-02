@@ -44,10 +44,10 @@ export default function SkillGapAnalysis() {
   };
 
   const getGapAnalysis = () => {
-    if (!targetRole || !targetRoles[targetRole]) return null;
+    if (!targetRole || !(targetRole in targetRoles)) return null;
 
     const current = getCurrentSkillsArray();
-    const target = targetRoles[targetRole];
+    const target = targetRoles[targetRole as keyof typeof targetRoles];
     
     const missingRequired = target.required.filter(
       skill => !current.includes(skill.toLowerCase())

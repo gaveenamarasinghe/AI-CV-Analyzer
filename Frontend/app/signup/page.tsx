@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import {
   Eye,
   EyeOff,
@@ -32,19 +32,18 @@ const AuthPage = () => {
     password: ""
   });
 
-  const showToast = (message, type) => {
+  const showToast = (message: string, type: "success" | "error" | ""): void => {
     setNotification({ show: true, message, type });
     setTimeout(() => {
       setNotification({ show: false, message: "", type: "" });
     }, 3000);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setIsLoading(true);
 
     try {
@@ -287,7 +286,7 @@ const AuthPage = () => {
 
               <button
                 type="button"
-                onClick={handleSubmit}
+                onClick={(e) => { e.preventDefault(); handleSubmit(); }}
                 disabled={isLoading}
                 className="w-full py-4 bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 text-white rounded-xl font-bold text-lg shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex justify-center items-center gap-2"
               >
