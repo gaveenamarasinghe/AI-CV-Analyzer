@@ -52,9 +52,10 @@ const AuthPage = () => {
         ? { email: formData.email, password: formData.password }
         : formData;
 
+      const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "";
       const url = isLogin
-        ? "http://localhost:5000/api/auth/login"
-        : "http://localhost:5000/api/auth/register";
+        ? `${baseUrl}/api/auth/login`
+        : `${baseUrl}/api/auth/register`;
 
       const res = await fetch(url, {
         method: "POST",
