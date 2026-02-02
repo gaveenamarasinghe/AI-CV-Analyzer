@@ -54,7 +54,7 @@ const CareerRoadmap = () => {
 
     // Simulate AI-powered roadmap generation with real-time job market data
     setTimeout(() => {
-      const sampleRoadmap = {
+      const sampleRoadmap: NonNullable<typeof roadmap> = {
         title: `${targetRole} Career Roadmap`,
         timeline: "12–24 months (depending on current level)",
         overallGoal: `Become a proficient ${targetRole} ready for top-tier companies`,
