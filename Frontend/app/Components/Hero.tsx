@@ -9,10 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
       
       <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-32 text-center lg:pt-32 lg:pb-40">
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full mb-8 font-medium">
-          <Sparkles className="w-5 h-5" />
-          <span>AI-Powered Career Growth</span>
-        </div>
+        
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight">
           <span className="text-gray-900">Accelerate Your Career with</span>
@@ -48,13 +45,13 @@ const Hero = () => {
         {/* Optional trust indicators */}
         <div className="mt-16 flex flex-wrap justify-center gap-8 text-sm text-gray-500">
           <div className="flex items-center gap-2">
-            <span className="text-green-500 text-xl">✓</span> 100% Free Trial
+            <span className="text-green-500 text-xl"></span> 100% Free Trial
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500 text-xl">✓</span> No Credit Card Required
+            <span className="text-green-500 text-xl"></span> No Credit Card Required
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500 text-xl">✓</span> Loved by 5,000+ Students
+            <span className="text-green-500 text-xl"></span> Loved by 5,000+ Students
           </div>
         </div>
       </div>
